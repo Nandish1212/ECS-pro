@@ -1,0 +1,20 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URL=mongodb+srv://test:55555@nandish12.hbgcsvp.mongodb.net/?retryWrites=true&w=majority&appName=nandish12
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5500:5500"
+    depends_on:
+      - backend
+    environment:
+      - Backend_url=http://backend:8000
+
