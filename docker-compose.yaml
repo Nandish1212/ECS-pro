@@ -6,7 +6,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - MONGO_URL=mongodb+srv://test:55555@nandish12.hbgcsvp.mongodb.net/?retryWrites=true&w=majority&appName=nandish12
+      - MONGO_URL=mongodb+srv://jul-05:Nandish@nandish12.hbgcsvp.mongodb.net/?retryWrites=true&w=majority&appName=nandish12
 
   frontend:
     build:
